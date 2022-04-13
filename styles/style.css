@@ -1,0 +1,90 @@
+@import url("./modules/normalize.css");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    background-color: #333;
+    width: 100vw;
+    height: 100vh;
+    font-family: Oswald;
+    color: #fff;
+    font-size: 100px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.player-hand, .computer-hand {
+    font-size: 200px;
+} 
+
+.player-hand {
+    transform: rotate(90deg) scale(-1, 1);
+}
+
+.computer-hand {
+    transform: rotate(-90deg);
+}
+
+button {
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.active-player {
+    animation-name: game-player;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 4;
+    animation-direction: alternate-reverse;
+}
+
+.active-computer {
+    animation-name: game-computer;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 4;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes game-player {
+    from {
+        transform: translateY(-50px) rotate(90deg) scale(-1, 1);
+    }
+    50% {
+        transform: translateY(50px) rotate(90deg) scale(-1, 1);
+    }
+    to {
+        transform: translateY(0) rotate(90deg) scale(-1, 1);
+    }
+}
+
+@keyframes game-computer {
+    from {
+        transform: translateY(-50px) rotate(-90deg);
+    }
+    50% {
+        transform: translateY(50px) rotate(-90deg);
+    }
+    to {
+        transform: translateY(0) rotate(-90deg);
+    }
+}
+
