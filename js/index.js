@@ -15,14 +15,14 @@ const options = ['🖐🏼','✌🏼','✊🏼']
 const scripts = {
     playerWin: () => {
         playerScore.textContent = Number(playerScore.textContent) + 1
-        return 'Вы выйграли!'
+        return '(☞ﾟヮﾟ)☞'
     },
     computerWin: () => {
         computerScore.textContent = Number(computerScore.textContent) + 1
-        return 'Вы проиграли!'
+        return '(╯°□°）╯︵ ┻━┻'
     },
     draw: () => {
-        return 'Ничья'
+        return '¯\\\_(ツ)_/¯'
     }
 }
 
